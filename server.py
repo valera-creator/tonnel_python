@@ -23,7 +23,7 @@ def main():
     api.add_resource(jobs_resource.JobsResource, '/api/v2/jobs/<int:jobs_id>')
     api.add_resource(jobs_resource.JobsListResource, '/api/v2/jobs')
 
-    app.run(port=8080, host='127.0.0.1', debug=True)
+    app.run()
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -68,7 +68,7 @@ def login():
         return render_template('login.html',
                                message="Неправильный логин или пароль",
                                form=form)
-    return render_template('login.html', title='Авторизация', form=form)
+    return render_template('login.html', title='Авторизация', form=form, message='her')
 
 
 def make_registration(db_sess, form):
@@ -183,3 +183,6 @@ def jobs_delete(id):
 
 if __name__ == '__main__':
     main()
+
+# xTunnel -k ВАШ_КЛЮЧ
+# xTunnel 5000
