@@ -184,5 +184,5 @@ def jobs_delete(id):
 if __name__ == '__main__':
     main()
 
-# xTunnel -k ВАШ_КЛЮЧ
+# xTunnel -k 04554c4c74204ea984c2d743e011edec
 # xTunnel 5000
